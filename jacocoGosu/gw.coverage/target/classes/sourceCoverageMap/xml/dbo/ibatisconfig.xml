@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <typeAliases>
+        <typeAlias alias="Coveredfile" type="gw.coverage.dbo.CoveredFile"/>
+    </typeAliases>
+
+    <environments default="onuba">
+        <environment id="devdb3">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+                <property name="url" value="jdbc:sqlserver://devdb3:2012;DatabaseName=msteinpx;User=sa;Password=Gw_123"/>
+            </dataSource>
+        </environment>
+        <environment id="mstein">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+                <property name="url" value="jdbc:sqlserver://mstein-t3500:1433;databaseName=Coverage;user=sa;password=Guidewire123"/>
+            </dataSource>
+        </environment>
+        <environment id="test">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+                <property name="url" value="jdbc:h2:~/coverage-test.db;MODE=MSSQLServer"/>
+            </dataSource>
+        </environment>
+        <environment id="onuba">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="org.h2.Driver"/>
+                <property name="url" value="jdbc:h2:~/coverage-test.db;MODE=MSSQLServer"/>
+            </dataSource>
+        </environment>
+        
+    </environments>
+
+    <mappers>
+        <mapper resource="sourceCoverageMap/xml/dbo/CoverageMapper.xml"/>
+    </mappers>
+
+</configuration>

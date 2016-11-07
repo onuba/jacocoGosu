@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+  <classpathentry kind="src" path="src"/>
+  <classpathentry kind="src" path="." including="about.html" excluding="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="src" path="/org.jacoco.report"/>
+  <classpathentry kind="src" path="/org.jacoco.core"/>
+  <classpathentry kind="var" path="M2_REPO/org/ow2/asm/asm-all/4.1/asm-all-4.1.jar"/>
+</classpath>

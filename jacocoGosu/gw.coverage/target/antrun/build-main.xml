@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <copy file="META-INF/MANIFEST.MF" tofile="C:\workspace\i_d\gosuJacoco-master\gw.coverage\target/META-INF/MANIFEST.MF" overwrite="true"/>
+  <replace file="C:\workspace\i_d\gosuJacoco-master\gw.coverage\target/META-INF/MANIFEST.MF">
+    <replacefilter token=".qualifier" value=".${buildQualifier}"/>
+  </replace>
+</target>
+</project>

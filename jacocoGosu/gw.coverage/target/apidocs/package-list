@@ -1,0 +1,3 @@
+gw.coverage.dbo
+gw.jacoco.sourcereport
+gw.jacoco.sqlreport

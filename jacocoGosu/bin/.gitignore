@@ -1,0 +1,10 @@
+/DoNotInstrument.class
+/Example.class
+/ExampleTest.class
+/TestTargetInDefault.class
+/com/
+/gw/
+/logback.xml
+/org/
+/somepackage/
+/sourceCoverageMap/
